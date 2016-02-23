@@ -1,6 +1,7 @@
 var reservasAPP = {
 	nombre: function () {
-		//por qué una función? http://stackoverflow.com/questions/35565979/js-why-this-object-property-wont-work-and-it-only-works-if-i-put-it-inside-one
+		//por qué una función? 
+		//http://stackoverflow.com/questions/35565979/js-why-this-object-property-wont-work-and-it-only-works-if-i-put-it-inside-one
         return $('#h09').val();
     },
 
