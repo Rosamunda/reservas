@@ -1,8 +1,14 @@
 var reservasAPP = {
+	nombre: function () {
+		//por qué una función? http://stackoverflow.com/questions/35565979/js-why-this-object-property-wont-work-and-it-only-works-if-i-put-it-inside-one
+        return $('#h09').val();
+    },
+
 	generarGrilla:function(){},
+
 	guardarReserva:function(){
 		var nombre = $('#h09').val();
-		var reservaConfirmada = $('#horario09').html('--> '+nombre);
+		var reservaConfirmada = $('#horario09').html('--> '+this.nombre());
 		return false;
 	},
 	cancelarReserva:function(){
