@@ -7,7 +7,7 @@ var reservasAPP = {
 	generarGrilla:function(){},
 
 	guardarReserva:function(){
-		var nombre = $('#h09').val();
+		var nombre = $('#h09').val(); //http://api.jquery.com/val/
 		var reservaConfirmada = $('#horario09').html('--> '+this.nombre());
 		return false;
 	},
