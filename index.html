@@ -12,13 +12,8 @@
 	<body>
 	<div class="container">
 		<h2>Reservar Salón</h2>
-		<form id="form1" action="" onload="reservas.generarGrilla();">
-			<div class="row col-md-5">
-			    Horario: 09 horas 
-			    <span id="horario09"><input type="text" id="h09"></span>
-			    <button class="btn btn-primary btn-xs" onclick="return reservas.guardarReserva();">Reservar</button>
-			    <button class="btn btn-danger btn-xs" onclick="return reservas.cancelarReserva();">Cancelar</button>
-			</div>
+		<form id="form1" action="">
+			<div id="grilla"></div>
   			<br>
 		</form> 
 	</div>
@@ -26,6 +21,11 @@
 <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="reservas.js"></script>
+	<script>
+	jQuery(document).ready(function($) {
+    	reservas.generarGrilla();
+		});
+	</script>
 
 
 	</body>
