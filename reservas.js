@@ -9,20 +9,21 @@ var reservasAPP = {
 		console.log("Grilla impresa");
 	},
 	nombre: function (i) {
-		//por qué una función? 
+		//por qué una función?
 		//http://stackoverflow.com/questions/35565979/js-why-this-object-property-wont-work-and-it-only-works-if-i-put-it-inside-one
-        return $('#hora'+i).val();
+		return $('#hora'+i).val();
     },	
 	guardarReserva:function(i){
-		var reservaConfirmada = $('#horario'+i).html('--> '+this.nombre(i));
 		var name = this.nombre(i);
-		//porqué este console log no anda?
+		var reservaConfirmada = $('#horario'+i).html('--> '+name);
+		//this.nombre(i) pierde el valor al ser hecha la reserva, queda undefined, entonces lo guardo en una variable
 		console.log("Reserva Confirmada en horario "+i+":00 horas para "+name);
+		//porqué si le quito el return false me recarga la página?
 		return false;
 	},
 	cancelarReserva:function(i){
 		var reservaCancelada = $('#horario'+i).html("<input type=\"text\" id=\"horario"+i+"\">");
-		console.log("Reserva Cancelada en horario "+i+":00 horas para "+this.nombre(i));
+		console.log("Reserva Cancelada en horario "+i+":00 horas para "+i;
 		//porqué return false?
 		return false;
 	},	
