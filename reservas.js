@@ -23,7 +23,7 @@ var reservasAPP = {
 	},
 	cancelarReserva:function(i){
 		var reservaCancelada = $('#horario'+i).html("<input type=\"text\" id=\"horario"+i+"\">");
-		console.log("Reserva Cancelada en horario "+i+":00 horas para "+i;
+		console.log("Reserva Cancelada en horario "+i+":00 horas para "+i);
 		//porqué return false?
 		return false;
 	},	
